@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>The services page is now ready</div>
+    <h1>Setting page</h1>
   )
 }
 

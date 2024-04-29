@@ -13,6 +13,9 @@ export default function Home() {
         onClick={()=> router.push("/enroll")}>
         Enroll Now
       </button>
+      <div className="scan">
+        
+      </div>
     </main>
   );
 }

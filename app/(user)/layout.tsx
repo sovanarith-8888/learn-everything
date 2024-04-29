@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import NavbarComponent from "@/components/navbar/NavbarComponent";
 import { Suspense } from "react";
-import Loading from "@/app/loading"
+import Loading from "@/app/(user)/loading"
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
-import Error from "@/app/error"
-const inter = Inter({ subsets: ["latin"] });
+import Error from "@/app/(user)/error"
+
+//const inter = Inter({ subsets: ["latin"] });
+import { inter,suwannaphum } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Learning",
@@ -20,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="h-screen flex flex-col">
+      <body className={`h-screen flex flex-col ${inter.variable}`} >
         <header>
           <NavbarComponent/>
         </header>
