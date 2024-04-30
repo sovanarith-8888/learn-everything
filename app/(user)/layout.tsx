@@ -18,8 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Isad ecom web",
     description: "Isad ecommer web is a web",
-    images: ["https://lilacinfotech.com/lilac_assets/images/blog/What-Is-E-commerce-and-what-are-its-Applications.jpg",
-    "https://miro.medium.com/v2/resize:fit:683/1*OQHjlcb-2BfNkyUA81CduA.png"
+    images: ["https://lilacinfotech.com/lilac_assets/images/blog/What-Is-E-commerce-and-what-are-its-Applications.jpg"
     ]
   }
 }
