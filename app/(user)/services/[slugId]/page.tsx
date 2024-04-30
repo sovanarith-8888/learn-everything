@@ -26,13 +26,13 @@ export async function generateMetadata(
   const product = await fetch(`https://fakestoreapi.com/products/${id}`).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent metadata
-  const previousImages = (await parent).openGraph?.images || []
+  //const previousImages = (await parent).openGraph?.images || []
  
   return {
     title: product.title,
     description: product.description,
     openGraph: {
-      images: [product.image, ...previousImages],
+      images: product.image,
     },
   }
 }
