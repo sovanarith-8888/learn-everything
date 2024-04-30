@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+Disallow: /dashboard
+
+Sitemap: https://learn-everything.vercel.app//sitemap.xml  
