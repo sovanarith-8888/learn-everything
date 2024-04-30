@@ -19,7 +19,7 @@ const Page = () => {
 
   return (
     <>
-    <div>
+    <div className="flex ">
       {
         
         products.map((product: any,index) =>{

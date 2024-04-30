@@ -15,8 +15,9 @@ export function CardProduct({title, image, price,onClick}: PropsType) {
     <Card
       onClick={onClick}
       className="max-w-sm"
-      imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
-      imgSrc="/images/products/apple-watch.png"
+      imgAlt="image product
+      "
+      imgSrc={image}
     >
       <a href="#">
         <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
