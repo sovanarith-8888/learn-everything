@@ -1,6 +1,21 @@
 "use client"
+import { ProductType } from '@/lib/definition';
+import { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
-const page = () => {
+const Dashboard = () => {
+  const [products, setProducts] = useState<ProductType[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  // fetch product
+  useEffect(()=>{
+    setLoading(true)
+    fetch("https://fakestoreapi.com/products")
+    .then(res => res.json())
+    .then(data => setProducts(data))
+    .catch(err => {
+      console.err
+    })
+  },[])
+
   const columns = [
     {
       name: 'Title',
@@ -15,7 +30,7 @@ const page = () => {
   ];
   
   const data = [
-      {
+    {
       id: 1,
       title: 'Beetlejuice',
       year: '1988',
@@ -23,6 +38,16 @@ const page = () => {
     {
       id: 2,
       title: 'Ghostbusters',
+      year: '1984',
+    },
+    {
+      id: 3,
+      title: 'KhmerGhost',
+      year: '1984',
+    },
+    {
+      id: 4,
+      title: 'The Uma',
       year: '1984',
     },
   ]
@@ -37,4 +62,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Dashboard
