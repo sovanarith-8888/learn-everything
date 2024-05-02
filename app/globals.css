@@ -10,3 +10,50 @@ body{
         font-family: var(--font-inter), var(--font-suwannaphum) !important;
 
 }
+.none-scroll-bar::--webkit-scrollbar{
+  display: none;
+}
+
+/* custome twele point start  <div className="start"><p>12$</p> <div>*/
+
+.star {
+	align-items: center;
+	background-color: red;
+	display: flex;
+	font-family: Roboto;
+	font-size:20px;
+	height: 40px;
+	justify-content: center;
+	margin: 0 auto;
+	position: relative;
+	transform: rotate(45deg);
+	width: 40px;
+	border-radius: 2px;
+	
+	&::before, &::after {
+		background-color: red;
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+		border-radius: 2px;
+	}
+	
+	&::before {
+		transform: rotate(30deg);
+		border-radius: 2px;
+	}
+	
+	&::after {
+		transform: rotate(60deg);
+		border-radius: 2px;
+	}
+	
+	p {
+		transform: rotate(-45deg);
+	}
+}

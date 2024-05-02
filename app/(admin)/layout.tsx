@@ -8,11 +8,11 @@ const layout = ({
 }>) => {
   return (
     <html>
-      <body className=''>
+      <body className='none-scroll-bar'>
         <aside>
           <SidebarComponent/>
         </aside>
-        <main className='absolute left-[30%] top-0 p-4'>
+        <main className='absolute left-[30%] w-[70%] top-0 p-4'>
           {children}
         </main>
       </body>
