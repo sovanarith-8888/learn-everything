@@ -1,0 +1,13 @@
+.container{
+  @apply w-screen bg-teal-950 p-5 rounded text-cyan-50
+}
+.form{
+
+}
+.h1{
+  font-size: 1.6rem;
+  color: green;
+}
+.btn{
+  @apply px-4 py-2 border border-cyan-500 rounded-md mt-4
+}
