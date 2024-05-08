@@ -1,1 +1,7 @@
 export const BASE_URL ="https://store.istad.co/";
+export const TOKEN = 
+`eyJ0eXAiOiJKV1QiLCJhbGci0iJIUZI1NiJ9.
+eyJ0b2t1b190eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEMjcxNDA1LCJpYXQiOjE
+3MTIXMTEOMDUSImp@aSI6IjV1NTg4Zjc5ZWFkZDRiNjY5MGZhNjEzYzYwOThiZj
+gxIiwidXN1c19pZCI6MX0.
+KJTQKDMsVyZ2e0U--sj9fQjLN6ZWaGBJIG_UNF_JILA`;
