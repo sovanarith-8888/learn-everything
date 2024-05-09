@@ -6,11 +6,12 @@ import { usePathname } from 'next/navigation'
 import { MenuLists } from "./menu";
 import { useState } from "react";
 import { MenuItemType } from "./menu";
+import { useAppSelector } from "@/redux/hooks";
 
 export function NavbarComponent() {
   const pathname =usePathname();
   const [menu, setMenu] = useState<MenuItemType[]>(MenuLists);
-
+  const count = useAppSelector((state)=> state.counter.value)
   function handleClickMenu(path: string){
     const newMenu = menu.map((item,index)=>{
       if(item.path === path){
@@ -28,7 +29,7 @@ export function NavbarComponent() {
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Learn Everything</span>
       </NavbarBrand>
       <div className="flex md:order-2">
-        <Button>Get started</Button>
+        <Button>Get started {count}</Button>
         <NavbarToggle />
       </div>
       <NavbarCollapse>

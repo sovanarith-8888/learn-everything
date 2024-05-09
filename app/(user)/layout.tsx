@@ -9,6 +9,7 @@ import Error from "@/app/(user)/error"
 
 //const inter = Inter({ subsets: ["latin"] });
 import { inter,suwannaphum } from "./fonts";
+import StoreProvider from "../StoreProvider";
 
 
 export const metadata: Metadata = {
@@ -31,15 +32,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`h-screen flex flex-col ${inter.variable}`} >
-        <header>
-          <NavbarComponent/>
-        </header>
-        <ErrorBoundary errorComponent={
-          Error}>
-          <Suspense fallback={<Loading/>}>
-            {children}
-          </Suspense>
-        </ErrorBoundary>
+        <StoreProvider >
+          <header>
+            <NavbarComponent/>
+          </header>
+          <ErrorBoundary errorComponent={
+            Error}>
+            <Suspense fallback={<Loading/>}>
+              {children}
+            </Suspense>
+          </ErrorBoundary>
+        </StoreProvider>
         
       </body>
     </html>
