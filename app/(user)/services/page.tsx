@@ -24,7 +24,7 @@ const Page = () => {
         
         products.map((product: any,index) =>{
           console.log("log product",product.title)
-          return <CardProduct onClick={()=> router.push(`/services/${product.id}`)}  key={index} title={product.title} price={product.price} image={product.image}/>
+          return <CardProduct onClick={()=> router.push(`/services/${product.id}`)}  key={index} id={product.id} title={product.title} price={product.price} image={product.image}/>
         })
       }
     </div>

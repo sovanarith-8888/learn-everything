@@ -6,3 +6,10 @@ export type ProductType = {
   description: string;
   image: string;
 }
+export type PropsType = {
+  id: number;
+  title: string;
+  image: string;
+  price: number;
+  onClick?: () => void;
+}
