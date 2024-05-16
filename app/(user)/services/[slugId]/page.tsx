@@ -1,7 +1,7 @@
 import CardComponent from "@/components/card/CardComponent";
 import { Metadata, ResolvingMetadata } from "next";
 import { title } from "process";
-
+import { useAppSelector } from "@/redux/hooks";
 
 type Props = {
   params: { slugId: string }

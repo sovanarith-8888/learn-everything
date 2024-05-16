@@ -30,4 +30,9 @@ export const MenuLists: MenuItemType[] = [
     path: "/contact",
     active: false
   },
+  {
+    name: "Cart 🎁",
+    path: "/cart",
+    active: false
+  },
 ]

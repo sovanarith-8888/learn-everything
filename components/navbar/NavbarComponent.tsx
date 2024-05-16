@@ -7,11 +7,13 @@ import { MenuLists } from "./menu";
 import { useState } from "react";
 import { MenuItemType } from "./menu";
 import { useAppSelector } from "@/redux/hooks";
+import { selectAvatar } from "@/redux/feature/userProfile/userProfileSlice";
 
 export function NavbarComponent() {
   const pathname =usePathname();
   const [menu, setMenu] = useState<MenuItemType[]>(MenuLists);
   const count = useAppSelector((state)=> state.counter.value)
+  const avator = useAppSelector(selectAvatar)
   function handleClickMenu(path: string){
     const newMenu = menu.map((item,index)=>{
       if(item.path === path){

@@ -1,10 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterSlice from './feature/counter/counterSlice';
+import cartSlice from './feature/cart/cartSlice';
+import  userProfileSlice  from './feature/userProfile/userProfileSlice';
 // Create store
 export const makeStore = () => {
   return configureStore({
     reducer:{
-      counter: counterSlice
+      counter: counterSlice,
+      cart: cartSlice,
+      userProfile: userProfileSlice
     }
   })
 }
